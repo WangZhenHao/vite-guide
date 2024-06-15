@@ -1,0 +1,13 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "myVite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

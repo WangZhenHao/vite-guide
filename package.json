@@ -1,0 +1,19 @@
+{
+  "name": "vite-guide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs --port 4000",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "homepage": "https://wangzhenhao.github.io/vite-guide",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "latest"
+  }
+}
