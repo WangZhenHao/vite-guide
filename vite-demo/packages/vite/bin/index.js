@@ -1,5 +1,6 @@
-const connect = require('connect')
-const { createServer } = require('http');
+
+// const connect = require('connect')
+const http = require('http');
 
 // 创建一个服务器对象
 const server = http.createServer((req, res) => {

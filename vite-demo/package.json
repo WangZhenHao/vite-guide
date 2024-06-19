@@ -1,10 +1,10 @@
 {
   "name": "vite-demo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "package",
+  "workspaces": ["packages/vite"],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "myVite"
   },
   "keywords": [],
   "author": "",
