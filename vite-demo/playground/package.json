@@ -2,7 +2,7 @@
   "name": "playground",
   "version": "1.0.0",
   "description": "",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "dev": "myVite"
   },
