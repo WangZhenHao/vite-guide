@@ -4,6 +4,7 @@ import connect from "connect";
 import resolveConfig from "./resoveConfig.js";
 import htmlFallbackMiddleware from './middlewares/htmlFallbackMiddleware.js'
 import indexHtmlMiddleware from './middlewares/indexHtmlMiddleware.js'
+import transformMiddleware from './middlewares/transformMiddleware.js'
 
 async function resolveHttpServer(app) {
     const { createServer } = await import("node:http");
@@ -34,12 +35,13 @@ async function createServer() {
         config,
     };
 
+    middlewares.use(transformMiddleware(server))
     middlewares.use(htmlFallbackMiddleware(server))
-
     middlewares.use(indexHtmlMiddleware(server));
 
     server.listen();
 }
+
 createServer();
 // // 创建一个服务器对象
 // const server = http.createServer((req, res) => {

@@ -1,1 +1,2 @@
-alert(1)
+import name from './test.js'
+alert(name)
