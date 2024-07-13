@@ -2,7 +2,9 @@
   "name": "vite-demo",
   "version": "1.0.0",
   "description": "package",
-  "workspaces": ["packages/vite"],
+  "workspaces": [
+    "packages/vite"
+  ],
   "scripts": {
     "test": "myVite"
   },

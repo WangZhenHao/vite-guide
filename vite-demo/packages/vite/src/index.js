@@ -5,6 +5,7 @@ import resolveConfig from "./resoveConfig.js";
 import htmlFallbackMiddleware from './middlewares/htmlFallbackMiddleware.js'
 import indexHtmlMiddleware from './middlewares/indexHtmlMiddleware.js'
 import transformMiddleware from './middlewares/transformMiddleware.js'
+import { createWebSocketServer } from './server/ws.js'
 
 async function resolveHttpServer(app) {
     const { createServer } = await import("node:http");
@@ -27,10 +28,12 @@ async function createServer() {
     const middlewares = connect();
 
     const httpServer = await resolveHttpServer(middlewares);
+    let ws
     const server = {
         httpServer,
         listen(port = 3000) {
             startServer(server, port);
+            ws = createWebSocketServer(httpServer)
         },
         config,
     };
